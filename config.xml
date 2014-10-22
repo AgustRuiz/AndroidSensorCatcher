@@ -2,11 +2,14 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" id="es.agustruiz.AndroidSensorCatcher" version="1.0.0">
     <name>AndroidSensorCatcher</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Capturador de sensores de un dispositivo Android
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="arl00029@red.ujaen.es" href="http://agustruiz.es">
+        Agustín Ruiz Linares
     </author>
     <content src="index.html"/>
     <access origin="*"/>
+    <feature name="Accelerometer">
+        <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener"/>
+    </feature>
 </widget>
