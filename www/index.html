@@ -64,6 +64,20 @@
                 </table>
             </fieldset>
 
+            <fieldset style="margin:1rem;">
+                <legend>Geoposicionamiento</legend>
+                <table>
+                    <tr>
+                        <th>Latitud</th>
+                        <td><span id="latitude"></span></td>
+                    </tr>
+                    <tr>
+                        <th>Longitud</th>
+                        <td><span id="longitude"></span></td>
+                    </tr>
+                </table>
+            </fieldset>
+
             <div class="footer" style="margin:1rem;">
                 <p>Desarrollado por <a href="http://agustruiz.es" target="_blank">Agustín Ruiz Linares</a></p>
             </div> 
@@ -85,6 +99,7 @@
             function onDeviceReady() {
                 watchAcceleration();
                 watchCompass();
+                watchGeolocation();
             }
 
 
@@ -140,6 +155,37 @@
             //
             function onErrorWatchCompass() {
                 compass.innerHTML = "<strong><em>Error en la lectura</em></strong>";
+            }
+
+
+            // Geolocation variables
+            //
+            var latitude = document.getElementById("latitude");
+            var longitude = document.getElementById("longitude");
+
+            // Start watching the acceleration
+            //
+            function watchGeolocation() {
+                // Update acceleration every 0.1 seconds
+                var options = {frequency: 100};
+                watchIDGeolocation = navigator.geolocation.watchPosition(onSuccessWatchGeolocation, onErrorWatchGeolocation, options);
+            }
+
+            // onSuccess: Get a snapshot of the current geolocation
+            //
+            function onSuccessWatchGeolocation(position) {
+                latitude.innerHTML = position.coords.latitude;
+                longitude.innerHTML = position.coords.longitude;
+                
+//                latitude.innerHTML = "<strong><em>NO DESARROLLADO</em></strong>";
+//                longitude.innerHTML = "<strong><em>NO DESARROLLADO</em></strong>";
+            }
+
+            // onError: Failed to get the geolocation
+            //
+            function onErrorWatchGeolocation() {
+                latitude.innerHTML = "<strong><em>Error en la lectura</em></strong>";
+                longitude.innerHTML = "<strong><em>Error en la lectura</em></strong>";
             }
 
         </script>

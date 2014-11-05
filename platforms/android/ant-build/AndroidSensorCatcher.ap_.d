@@ -54,7 +54,6 @@
 /home/agustin/GitHub/AndroidSensorCatcher/platforms/android/assets/www/plugins/org.apache.cordova.globalization/www/GlobalizationError.js \
 /home/agustin/GitHub/AndroidSensorCatcher/platforms/android/assets/www/plugins/org.apache.cordova.globalization/www/globalization.js \
 /home/agustin/GitHub/AndroidSensorCatcher/platforms/android/assets/www/js/index.js \
-/home/agustin/GitHub/AndroidSensorCatcher/platforms/android/assets/www/js/accelerometer.js \
 /home/agustin/GitHub/AndroidSensorCatcher/platforms/android/assets/www/img/logo.png \
 /home/agustin/GitHub/AndroidSensorCatcher/platforms/android/assets/www/css/index.css \
 /home/agustin/GitHub/AndroidSensorCatcher/platforms/android/ant-build/AndroidManifest.xml \
